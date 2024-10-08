@@ -30,9 +30,19 @@ Swagger UI is available to explore the API.
 
 - Navigate to: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
+## Swagger
+
+Swagger allows you to visualize and interact with the API endpoints without needing any implementation logic in place. It is automatically generated based on the API specifications defined in the Spring Boot application.
+
+1. After starting the application, access the Swagger UI at: `http://localhost:8080/swagger-ui.html`
+2. Here, you can see all the available endpoints, their parameters, and response formats.
+3. You can test the API directly from this interface by filling out the required parameters and clicking "Try it out!".
+
 ## Testing
 
 You can test the RESTful API using tools like Postman or CURL. Sample endpoints include:
+- **Get All Accounts** ! `GET /api/accounts` <br/>
+
 
 - **Create Account**: `POST /api/accounts`
 - **Get Account by ID**: `GET /api/accounts/{id}`
@@ -45,11 +55,7 @@ The project also exposes a GraphQL API for querying accounts.
 
 - Navigate to: [http://localhost:8080/graphql](http://localhost:8080/graphql)
 
-Example query:
-{ 
-    account(id: 1) { 
-        id
-        balance
-        owner 
-    } 
-}
+
+Example query:<br/>
+
+<img width="659" alt="image" src="https://github.com/user-attachments/assets/7fa9418c-1a26-4d39-9d06-908e20070724">
