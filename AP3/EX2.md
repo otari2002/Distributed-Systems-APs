@@ -32,4 +32,6 @@ This runs both the broker and controller in a single process.
 
 ## Stop the Kafka broker
 Once you’ve finished you can shut down Kafka:
-<img width="647" alt="Capture d’écran 2024-10-07 110646" src="https://github.com/user-attachments/assets/1e2127ac-8d6c-4bba-82a5-edbc9959ea12">
+<br/>
+<br/>
+<img width="757" alt="Capture d’écran 2024-10-07 110646" src="https://github.com/user-attachments/assets/1e2127ac-8d6c-4bba-82a5-edbc9959ea12">
