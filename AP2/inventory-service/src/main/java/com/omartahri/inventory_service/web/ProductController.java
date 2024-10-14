@@ -14,11 +14,11 @@ import java.util.List;
 @RestController
 public class ProductController {
     private final ProductRepository productRepository;
-    @GetMapping("/products")
+    @GetMapping({"/products", "/products/"})
     public List<Product> getProducts(){
         return productRepository.findAll();
     }
-    @GetMapping("/products/{id}")
+    @GetMapping({"/products/{id}", "/products/{id}/"})
     public Product getProduct(@PathVariable Long id){
         return productRepository.findById(id).orElse(null);
     }
