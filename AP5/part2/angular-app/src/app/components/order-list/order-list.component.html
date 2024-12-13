@@ -1,0 +1,13 @@
+<c-card>
+  <c-card-header>
+    <h2>Orders</h2>
+  </c-card-header>
+  <c-card-body>
+    <ul cListGroup>
+      <a cListGroupItem *ngFor="let order of orders" [routerLink]="['/orders', order.id]">
+        <c-icon name="cil-cart" class="me-2"></c-icon>
+        Order {{ order.index + 1 }}
+      </a>
+    </ul>
+  </c-card-body>
+</c-card>

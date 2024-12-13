@@ -1,0 +1,56 @@
+<div class="container mt-3">
+  <h2 class="mb-4">Order Details</h2>
+  
+  <div class="card" id={{order.id}} *ngIf="order">
+    <div class="card-header">
+      <div class="row">
+        <div class="col">
+          <strong>Order ID:</strong> {{order.id}}
+        </div>
+        <div class="col">
+          <strong>Date:</strong> {{order.date | date}}
+        </div>
+        <div class="col">
+          <strong>Status:  </strong> 
+          <span class="badge" [ngClass]="{
+            'bg-warning': order.state === 'PENDING',
+            'bg-success': order.state === 'COMPLETED',
+            'bg-danger': order.state === 'CANCELLED'
+          }">{{order.state}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <h5 class="card-title mb-3">Products</h5>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Unit Price</th>
+              <th>Quantity</th>
+              <th class="text-end">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of order.productItems">
+              <td>{{item.product.name}}</td>
+              <td>{{item.price | currency}}</td>
+              <td>{{item.quantity}}</td>
+              <td class="text-end">{{item.price * item.quantity | currency}}</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3" class="text-end"><strong>Total Order Amount:</strong></td>
+              <td class="text-end">
+                <strong>{{ calculateTotal() | currency }}</strong>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
