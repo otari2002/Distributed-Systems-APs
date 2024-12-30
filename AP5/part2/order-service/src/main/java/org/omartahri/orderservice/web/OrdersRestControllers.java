@@ -1,6 +1,7 @@
 package org.omartahri.orderservice.web;
 
 import org.omartahri.orderservice.entities.Order;
+import org.omartahri.orderservice.model.Product;
 import org.omartahri.orderservice.repositories.OrderRepository;
 import org.omartahri.orderservice.restclients.InventoryRestClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -38,5 +39,10 @@ public class OrdersRestControllers {
             pi.setProduct(inventoryRestClient.findProductById(pi.getProductId()));
         });
         return order;
+    }
+
+    @GetMapping("inventory")
+    public List<Product> getAllProducts(){
+        return inventoryRestClient.getAllProducts();
     }
 }
