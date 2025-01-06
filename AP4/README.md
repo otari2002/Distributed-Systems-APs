@@ -1,4 +1,4 @@
-# CQRS & Event Sourcing with Axon Framework Documentation
+# CQRS & Event Sourcing with Axon
 
 ## Project Overview
 
@@ -14,7 +14,6 @@
 - Query Module
 - Event Module
 - Domain Module
-- Infrastructure Module
 
 ## 2. Domain Models
 
@@ -52,21 +51,3 @@
 
 ### Query Handlers
 - AccountQueryHandler
-
-
-# Monitoring
-
-### Metrics
-- Command processing time
-- Event handling latency
-- Query response time
-  
-### Metrics
-- Command processing time
-- Event handling latency
-- Query response time
-
-### Dashboard
-- Real-time account balance
-- Transaction history
-- Event timeline
